@@ -32,7 +32,7 @@ const onShowApplication = function (event) {
 
   const form = event.target
   const formData = getFormFields(form)
-  const id = formData.movie.id
+  const id = formData.application.id
 
   api.show(id)
     .then(ui.onShowSuccess)
@@ -45,7 +45,7 @@ const onDeleteApplication = function (event) {
 
   const form = event.target
   const formData = getFormFields(form)
-  const id = formData.movie.id
+  const id = formData.application.id
 
   api.destroy(id)
     .then(ui.onDeleteSuccess)
@@ -58,7 +58,7 @@ const onUpdateApplication = function (event) {
 
   const form = event.target
   const formData = getFormFields(form)
-  const id = formData.applications.id
+  const id = formData.application.id
 
   api.update(id, formData)
     .then(ui.onUpdateSuccess)

@@ -11,7 +11,6 @@ const onCreateSuccess = function (responseData) {
   const application = responseData.application
   $('#applications-display').html(`
     <div>
-      <h3>${application.name}</h3>
       <p>Company: ${application.company}</p>
       <p>Role:${application.role}</p>
       <p>Salary:${application.salary}</p>
@@ -40,7 +39,6 @@ const onIndexSuccess = function (responseData) {
   applications.forEach(application => {
     applicationsHtml += `
     <div>
-    <h3>${application.name}</h3>
     <p>Company: ${application.company}</p>
     <p>Role:${application.role}</p>
     <p>Salary:${application.salary}</p>
@@ -73,7 +71,6 @@ const onShowSuccess = function (responseData) {
   const application = responseData.application
   $('#applications-display').html(`
     <div>
-    <h3>${application.name}</h3>
     <p>Company: ${application.company}</p>
     <p>Role:${application.role}</p>
     <p>Salary:${application.salary}</p>

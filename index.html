@@ -66,7 +66,9 @@
       <main>
         <section>
           <h2>Get All Applications</h2>
-          <button id="applications-index">Get All Applications</button>
+          <form id="applications-index">
+          <button>Get All Applications</button>
+          </form>
           <hr>
 
           <h2>Get One Application</h2>
@@ -84,7 +86,8 @@
             <!-- Since this button is inside a form, 
                  it has the type="submit" by default. 
                  Which means if the button is clicked, the form is submitted.-->
-            <button>Destroy Application</button>
+                 <button class="btn btn-danger">Delete Application</button>
+            <!-- <button>Destroy Application</button> -->
           </form>
 
           <h2>Update One Application</h2>
@@ -101,7 +104,7 @@
           </form>
 
           <h2>Create an Application</h2>
-          <form id="aplication-create">
+          <form id="applications-create">
             <!-- <input type="text" name="application[id]" placeholder="Application ID" required> -->
             <input type="text" name="application[company]" placeholder="Company" required>
             <input type="text" name="application[role]" placeholder="Role" required>
