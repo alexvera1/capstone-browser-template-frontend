@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Application Tracker</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,115 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
-    </body>
+      <h1>Application Tracker</h1>
+
+<!-- Sign up form goes here-->
+
+ <section id="before-sign-in">
+
+  <form id="sign-up" class="border">
+    <fieldset>
+      <legend>Sign Up</legend>
+      <input type="email" name="credentials[email]" placeholder="Email" required>
+      <input type="password" name="credentials[password]" placeholder="Password" required>
+      <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation" required>
+      <button class="btn btn-info">Sign Up!</button>
+    </fieldset>
+  </form>
+
+  <!-- Sign in form goes here-->
+
+  <form id="sign-in" class="border">
+    <fieldset>
+      <legend>Sign In</legend>
+      <input type="email" name="credentials[email]" placeholder="Email" required>
+      <input type="password" name="credentials[password]" placeholder="Password" required>
+      <button class="btn btn-info">Sign In!</button>
+    </fieldset>
+  </form>
+</section>
+
+
+<!-- We only want this section to be visible after we sign in.
+     By default it should not be displayed. -->
+<section id="after-sign-in">
+
+  <form id="change-password" class="border">
+    <fieldset>
+      <legend>Change Password</legend>
+      <input type="password" name="passwords[old]" placeholder="Old Password" required>
+      <input type="password" name="passwords[new]" placeholder="New Password" required>
+      <button class="btn btn-info">Change Password</button>
+    </fieldset>
+  </form>
+
+    <form id="sign-out" class="border">
+      <fieldset>
+        <legend>Sign Out</legend>
+        <button class="btn btn-info">Sign Out</button>
+      </fieldset>
+    </form>
+
+<!-----------------Application CRUD---------------->
+<h1>Application History</h1>
+      <main>
+        <section>
+          <h2>Get All Applications</h2>
+          <button id="applications-index">Get All Applications</button>
+          <hr>
+
+          <h2>Get One Application</h2>
+          <form id="applications-show">
+            <input type="text" name="application[id]" placeholder="Application ID" required>
+            <!-- Since this button is inside a form, 
+                 it has the type="submit" by default. 
+                 Which means if the button is clicked, the form is submitted.-->
+            <button>Get Application</button>
+          </form>
+
+          <h2>Destroy One Application</h2>
+          <form id="applications-destroy">
+            <input type="text" name="application[id]" placeholder="Application ID" required>
+            <!-- Since this button is inside a form, 
+                 it has the type="submit" by default. 
+                 Which means if the button is clicked, the form is submitted.-->
+            <button>Destroy Application</button>
+          </form>
+
+          <h2>Update One Application</h2>
+          <form id="applications-update">
+            <input type="text" name="application[id]" placeholder="Application ID" required>
+            <input type="text" name="application[company]" placeholder="Company" required>
+            <input type="text" name="application[role]" placeholder="Role" required>
+            <input type="text" name="application[salary]" placeholder="Salary" required>
+            <input type="text" name="application[status]" placeholder="Status" required>
+            <!-- Since this button is inside a form, 
+                 it has the type="submit" by default. 
+                 Which means if the button is clicked, the form is submitted.-->
+            <button>Update Application</button>
+          </form>
+
+          <h2>Create an Application</h2>
+          <form id="aplication-create">
+            <!-- <input type="text" name="application[id]" placeholder="Application ID" required> -->
+            <input type="text" name="application[company]" placeholder="Company" required>
+            <input type="text" name="application[role]" placeholder="Role" required>
+            <input type="text" name="application[salary]" placeholder="Salary" required>
+            <input type="text" name="application[status]" placeholder="Status" required>
+            <!-- Since this button is inside a form, 
+                 it has the type="submit" by default. 
+                 Which means if the button is clicked, the form is submitted.-->
+            <button>Create Application</button>
+          </form>
+        </section>
+
+        <section>
+          <!-- create a section for our user feedback -->
+          <div id="auth-display"></div>
+          <div id="error-message"></div>
+          <div id="applications-display"></div>
+        </section>
+      </main>
+    </section>
+  </body>
 </html>
