@@ -44,10 +44,6 @@ const onIndexSuccess = function (responseData) {
     <p>Salary:${application.salary}</p>
     <p>Status:${application.status}</p>
     <p>ID: ${application._id}</p>
-    <!-- Add the players's id to the delete button. We can access
-             it with jQuery's .data() method later in events.js -->
-        <button class="applications-destroy-dynamic" data-id=${applications._id} data-company="${applications.name}">Destroy Application</button>
-      </div>
     </div>
   `
   })
@@ -81,7 +77,7 @@ const onShowSuccess = function (responseData) {
 }
 
 const onShowFailure = function (error) {
-  $('#error-message').text('Error on getting movie')
+  $('#error-message').text('Error on getting application')
   $('#error-message').removeClass()
   $('#error-message').addClass('text-danger')
   console.error('onShowFailure ran. Error is :', error)
@@ -91,7 +87,7 @@ const onDestroySuccess = function () {
   $('#applications-display').text('Application successfully deleted')
   $('#applications-display').removeClass()
   $('#applications-display').addClass('text-success')
-  $('form').trigger('reset')
+  // $('form').trigger('reset')
   console.log('application successfully deleted')
 }
 
@@ -106,7 +102,7 @@ const onUpdateSuccess = function () {
   $('#applications-display').text('Application successfully updated')
   $('#applications-display').removeClass()
   $('#applications-display').addClass('text-success')
-  $('form').trigger('reset')
+  // $('form').trigger('reset')
   console.log('Application successfully updated')
 }
 

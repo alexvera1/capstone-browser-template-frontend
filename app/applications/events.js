@@ -69,7 +69,7 @@ const addHandlers = () => {
   $('#applications-create').on('submit', onCreateApplication)
   $('#applications-index').on('submit', onIndexApplication)
   $('#applications-show').on('submit', onShowApplication)
-  $('#applications-delete').on('submit', onDeleteApplication)
+  $('#applications-destroy').on('submit', onDeleteApplication)
   $('#applications-update').on('submit', onUpdateApplication)
 }
 
