@@ -10,8 +10,10 @@
 * Use npm start to start up server.
 
 ## Important Links
-https://intense-ridge-42862.herokuapp.com
 
+Deployed Website: https://alexvera1.github.io/capstone-browser-template-frontend/
+
+Backend repository: https://github.com/alexvera1/Capstone-Project
 
 ## User Stories
 
